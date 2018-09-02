@@ -1,0 +1,15 @@
+#Testing out the GPIO pins on the vision bonnet
+
+from gpizero import LED
+from time import sleep
+from aiy.pins import PIN_D
+
+red = LED(PIN_D)
+
+while True:
+	red.on()
+	print('hello red')
+	Sleep(2)
+	red.off()
+	print('goodbye red')
+	Sleep(2)
