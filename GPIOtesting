@@ -1,4 +1,16 @@
 #Testing out the GPIO pins on the vision bonnet
+#To use the code:
+#	Hardware setup
+#		pin d connectted to 0.464 kohm resister and base of 2n222p transister
+#		GND pin connected to negative of 9v battery
+#		LED driver: GND to 0.977 kohm resister to collector-emitter to LED to 9V+		
+#	Software setup
+#		copy this .py file to Desktop directory of rasbperry pi with vision hat, after following kit 
+#		tutorial exactly - down to disabling joy detector
+#		open pi terminal 
+#		cd into Desktop directory
+#		type "python3 <filename.py>" into terminal and press enter
+
 
 from gpiozero import LED
 from time import sleep
