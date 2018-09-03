@@ -14,17 +14,26 @@
 
 from gpiozero import Servo
 from time import sleep
+from aiy.pins import PIN_A
+from aiy.pins import PIN_B
+from aiy.pins import PIN_C
 from aiy.pins import PIN_D
 
 servo1 = Servo(PIN_D)
+servo2 = Servo(PIN_C)
+servo3 = Servo(PIN_B)
+servo4 = Servo(PIN_A)
 
 while True:
-	servo1.min()
-	print('servo min')
-	sleep(1)
-	servo1.mid()
-	print('servo mid')
-	sleep(1)
-  servo1.max()
-	print('servo max')
-	sleep(1)
+    servo1.min()
+#	print('servo min')
+#	sleep(5)
+    servo2.mid()
+#	print('servo mid')
+#	sleep(5)
+    servo3.max()
+#	print('servo max')
+#	sleep(5)
+    servo4.min()
+    sleep(10)
+    print('again')
