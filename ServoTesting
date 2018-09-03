@@ -1,0 +1,30 @@
+#Testing out SG90 Servo on GPIO pins on the vision bonnet
+#To use the code:
+#	Hardware setup
+#		pin d connectted to signal of Servo
+#		GND pin connected to negative of 5.2v source
+#		Servo driver: straight to 5.2v source	
+#	Software setup
+#		copy this .py file to Desktop directory of rasbperry pi with vision hat, after following kit 
+#		tutorial exactly - down to disabling joy detector
+#		open pi terminal 
+#		cd into Desktop directory
+#		type "python3 <filename.py>" into terminal and press enter
+
+
+from gpiozero import Servo
+from time import sleep
+from aiy.pins import PIN_D
+
+servo1 = Servo(PIN_D)
+
+while True:
+	servo1.min()
+	print('servo min')
+	sleep(1)
+	servo1.mid()
+	print('servo mid')
+	sleep(1)
+  servo1.max()
+	print('servo max')
+	sleep(1)
