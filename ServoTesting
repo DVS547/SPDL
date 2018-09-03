@@ -24,16 +24,39 @@ servo2 = Servo(PIN_C)
 servo3 = Servo(PIN_B)
 servo4 = Servo(PIN_A)
 
-while True:
-    servo1.min()
-#	print('servo min')
-#	sleep(5)
-    servo2.mid()
-#	print('servo mid')
-#	sleep(5)
-    servo3.max()
-#	print('servo max')
-#	sleep(5)
-    servo4.min()
-    sleep(10)
-    print('again')
+try:
+    while True:
+        servo1.min()
+#	    print('servo min')
+#	    sleep(5)
+        servo2.mid()
+#	    print('servo mid')
+#	    sleep(5)
+        servo3.max()
+#	    print('servo max')
+#	    sleep(5)
+        servo4.min()
+        sleep(10)
+        print('again')
+
+except KeyboardInterrupt:
+    servo1.close()
+    servo2.close()
+    servo3.close()
+    servo4.close()
+    print('KeyboardInterrupt exception triggered')
+
+except:
+    servo1.close()
+    servo2.close()
+    servo3.close()
+    servo4.close()
+    print('general exception triggered')
+    
+finally:
+    servo1.close()
+    servo2.close()
+    servo3.close()
+    servo4.close()
+    print('All buttoned up!')
+    

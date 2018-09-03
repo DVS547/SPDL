@@ -18,10 +18,23 @@ from aiy.pins import PIN_D
 
 red = LED(PIN_D)
 
-while True:
-	red.on()
-	print('hello red')
-	sleep(2)
-	red.off()
-	print('goodbye red')
-	sleep(2)
+try:
+	while True:
+		red.on()
+		print('hello red')
+		sleep(2)
+		red.off()
+		print('goodbye red')
+		sleep(2)
+
+except KeyboardInterrupt:
+    red.close()
+    print('KeyboardInterrupt exception triggered')
+
+except:
+    red.close()
+    print('general exception triggered')
+    
+finally:
+    red.close()
+    print('All buttoned up!')
