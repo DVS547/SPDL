@@ -58,5 +58,5 @@ finally:
     servo2.close()
     servo3.close()
     servo4.close()
-    print('All closed')
+    print('All buttoned up!')
     
